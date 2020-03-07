@@ -1,0 +1,106 @@
+@charset "utf-8";
+
+/* common */
+.title {
+    text-align: center;
+}
+
+/* header */
+.open header nav {
+    left: 0;
+}
+header nav {
+    /* position: fixed;
+    left: -300px;
+    bottom: 0;
+    top: 0;
+    width: 300px;
+    padding: 20px 0;
+    background: #fff;
+    transition: left 0.5s;
+    transform: none; */
+}
+
+
+header .nav-mobile {
+    display: block;
+}
+header .nav-pc{
+    display: none;
+}
+header .nav-pc li{
+    display: block;
+    margin: 10px 0;
+}
+.nav-tit{
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+/* main */
+.main .txtWrap {
+    padding: 100px 0 0 30px;
+}
+.main .txtWrap h3 {
+    font-size: 30px;
+}
+.main .txtWrap h3.pfTxt {
+    font-size: 48px;
+}
+
+.main {
+    background: url(../img/mobileMain.png) no-repeat center;
+    height: 520px;
+}
+
+
+/* about */
+#about {
+    background: url(../img/mobileAboutBg.png.png) no-repeat center;
+    height: 393px;
+    padding: 10px 0;
+}
+#about .profile .circle {
+    width: 250px;
+    height: 250px;
+}
+
+
+/* pf */
+#portfolio {
+    padding: 50px;
+}
+#portfolio .center .pfWrap.right .textBox,
+#portfolio .pfWrap .textBox {
+    padding: 40px 0;
+}
+
+.textBox .textTit {
+    font-size: 2em;
+}
+.textBox .textTit>.subTit {
+    font-size: 16px;
+}
+.textBox .textSkile {
+    font-size: 12px;
+    margin: 6px 0 24px;
+}
+.textBox .caption {
+    font-size: 14px;
+    padding-top: 6px;
+}
+button{
+    font-size: 10px;
+    padding: 1.2em 6em;
+    margin: 10px 0;
+}
+
+
+/* contact */
+.tnkWrap>h2{
+    font-size: 22px;
+}
+#contact .contact li {
+    font-size: 12px;
+}

@@ -9,6 +9,14 @@ $(function(){
         $('body').removeClass('scroll');
     }
   });
+  //
+  $('.material-icons').click(function(){
+   $('body').toggleClass('open');
+ })
+ 
+  $('.material-icons').click(function(){
+   $('.nav-pc').show();
+ });
 
   //타이핑 효과
    var typingBool = false; 
