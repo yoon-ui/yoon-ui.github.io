@@ -57,9 +57,10 @@ header .nav-pc li{
 
 /* about */
 #about {
-    background: url(../img/mobileAboutBg.png.png) no-repeat center;
-    height: 393px;
-    padding: 10px 0;
+    background: url(../img/mobileAboutBg.png) no-repeat center;
+    height: 600px;
+    padding: 30px 10px;
+    box-sizing: border-box;
 }
 #about .profile .circle {
     width: 250px;
@@ -69,8 +70,12 @@ header .nav-pc li{
 
 /* pf */
 #portfolio {
-    padding: 50px;
+    padding: 50px 20px;
 }
+#portfolio .center .pfWrap{
+    margin-top: 40px;
+}
+
 #portfolio .center .pfWrap.right .textBox,
 #portfolio .pfWrap .textBox {
     padding: 40px 0;

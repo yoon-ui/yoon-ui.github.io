@@ -1,17 +1,96 @@
 @charset "utf-8";
 
+
+/* font */
+
+ @font-face {
+    font-family: 'NanumGothic';
+    src: url(../font/NanumSquareL.ttf);
+    font-weight: 200;
+ }
+ 
+ @font-face {
+  font-family: 'NanumGothic';
+  src: url(../font/NanumSquareR.ttf);
+  font-weight: 400;
+}
+ 
+ @font-face {
+    font-family: 'NanumGothic';
+    src: url(../font/NanumSquareB.ttf);
+    font-weight: 600;
+ }
+ @font-face {
+  font-family: 'NanumGothic';
+  src: url(../font/NanumSquareEB.ttf);
+  font-weight: 800;
+}
+ 
+
+@import url(//fonts.googleapis.com/earlyaccess/nanummyeongjo.css);
+
+.nanummyeongjo * {
+ font-family: 'Nanum Myeongjo', serif;
+}
+
+/** 이하는 공통 **/
+.normal {
+ font-style: normal;
+}
+
+.w250 {
+ font-weight: 250;
+}
+
+.w300 {
+ font-weight: 300;
+}
+
+.w350 {
+ font-weight: 350;
+}
+
+.w400 {
+ font-weight: 400;
+}
+
+.w500 {
+ font-weight: 500;
+}
+
+.w600 {
+ font-weight: 600;
+}
+
+.w700 {
+ font-weight: 700;
+}
+
+.w800 {
+ font-weight: 800;
+}
+
+.w900 {
+ font-weight: 900;
+}
+
+li span {
+ line-height: 1.8;
+ font-size: 1.3em;
+}
+
+
+  body{font-family:'NanumGothic','sans-serif';}
+
 /* reset */
 *{margin: 0;padding: 0; border: 0;}
 a{text-decoration: none;color: #000;}
 ol, ul{list-style: none;}
 img{vertical-align: middle; max-width: 100%}
 /* common */
-body{
-  background:#f0f1f5
-}
 .center{
   position: relative;
-  max-width: 1600px;
+  max-width: 1400px;
   margin: auto;
 }
 .inner{
@@ -20,15 +99,29 @@ body{
   margin: 0 auto;
   padding: 50px 0;
 }
+
+/* title */
 .title{
-  text-align: left;
+  display: block;
+  text-align: center;
   font-weight: bold;
   font-size: 24px;
-  color: #fff;
+  color: #000;
 }
+.pfTit::before,
+.pfTit::after{
+    content: '';
+    background: url(../img/slash.png) no-repeat;
+    background-size: cover;
+    display: inline-block;
+    width: 60px;
+    height: 15px;
+    margin: 0 55px 0 55px;
+}
+
+
 /* 타이핑 효과 */
 .typing-txt{display: none;}
-ul{list-style:none;}
 .typing ul li{
   display:block;
 }
@@ -57,7 +150,7 @@ header nav{
   padding: 20px;
   box-sizing: border-box;
   font-size: 1.1em;
-  color: #fa7333;
+  color: #1f4af8;
   z-index: 99;
 }
 header .nav-pc {
@@ -68,7 +161,7 @@ header  .nav-pc li{
   margin-right: 20px;
 }
 header  .nav-pc li>a{
-  color: #fa7333;
+  color: #fff;
 }
 header nav .nav-pc>li>a::after{
   content: '';
@@ -76,14 +169,14 @@ header nav .nav-pc>li>a::after{
   width: 0%;
   height: 4px;
   margin: auto;
-  background: #ee6939;
+  background: #1f4af8;
   transition: width 0.2s;
 }
 header nav .nav-pc>li:hover>a::after{
   width: 100%;
 }
 header nav .nav-pc>li:hover>a{
-  color: #ffb89e;
+  color: #93a9ff;
 }
 
 header nav .nav-tit{
@@ -91,31 +184,33 @@ header nav .nav-tit{
 }
 
 /* scroll */
-
-
 .scroll header nav{
-  box-shadow: 0 0 4px 0 rgba(206, 204, 204, 0.4);
-  background: #fff;
+  background: #5167f4;
   line-height: 20px;
  }
 
+
+
+
 /* main */
 .main{
-  background: url(../img/main.png) no-repeat center;
+  background: url(../img/main2.png) no-repeat center;
   background-size: cover;
   position: relative;
   height: 800px;
 }
 .main .txtWrap{
-    padding-top: 230px;
+    padding: 300px 0px 0px 100px;
     box-sizing: border-box;
+    color: #fff;
 }
 .main .txtWrap h3{
   font-weight: bold;
   font-size: 50px;
 }
 .main .txtWrap h3.pfTxt{
-  font-size: 84px;
+ font-size: 84px;
+ font-weight: 100;
 }
 .main .txtWrap .typingTxt{
   font-size: 18px;
@@ -125,59 +220,63 @@ header nav .nav-tit{
 
 /* about */
 #about{
-  position: relative;
-  background: url(../img/aboutBg.png) no-repeat center;
-  /* background-size: cover; */
+  background: #f9faff;
   height: 600px;
   padding: 100px 0;
 }
 
 #about .profile{
-  /* float: left; */
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%);
+  float: left;
 }
-#about .profile .circle::before{
-  content: '';
-  width: 500px;
-  height: 500px;
-  background: red;
+#about .abtitle{
+  color: #5167f4;
+  font-size: 36px;
+  text-transform: uppercase;
+  letter-spacing: 10px;
+  padding: 0 0 80px 0;
 }
-#about .profile .circle{
+#about .profile{
   position: relative;
-  width: 500px;
-  height: 500px;
-  margin: 30px auto;
+  width: 300px;
+  height: 300px;
+  margin: 80px 50px;
   border-radius: 50%;
   overflow: hidden;
 }
-#about .profile .circle::after{
-  content: '?';
-  display: block;
-  width: 500px;
-  height: 500px;
-  background: #8e8e8e;
-  /* position: relative; */
-  left: 41px;
-  top: 0;
-}
-#about .profile .circle>img:hover {
+
+#about .profile>img:hover {
   filter: grayscale(0%);
   transition: .5s ease-in-out;
 } 
 
-#about .profile .circle>img {
+#about .profile>img {
   filter: grayscale(100%);
   transition: .5s ease-in-out;
 }
-#about  .aboutTxt{
-  text-align: center;
-  font-weight: 600;
-  font-size: 24px;
-  /* padding: 250px 0 0; */
-  color: #4d4d4d;
+
+#about .infoWrap{
+  padding: 0 50px;
+}
+.txtWrap{
+  display: inline-block;
+}
+
+#about .date{
+  color:#989696;
+}
+#about .txt{
+  padding: 0 0 20px 0;
+}
+#about .txt>h3{
+  color:#5167f4;
+  padding: 10px 0;
+}
+#about li>p{
+  padding: 5px 0;
+}
+
+#about .edu_list{
+  padding: 0 0 10px 0;
 }
 
 /* #about .wrap{
@@ -200,16 +299,34 @@ header nav .nav-tit{
 
 #portfolio{
   width: 100%;
-  padding: 100px 0;
+  padding: 100px 0 0;
   box-sizing: border-box;
   position: relative;
 }
 #portfolio .center .pfWrap {
   position: relative;
   height: 650px;
-  margin-top: 100px;
+  margin-top: 200px;
+}
+#portfolio .center .pfWrap.left>.pfNum{
+  font-family: 'Nanum Myeongjo';
+  font-size: 523px;
+  color: #e6e7f0;
+  position: absolute;
+  left: -170px;
+  top: -270px;
+  z-index: -1;
 }
 
+#portfolio .center .pfWrap.right>.pfNum{
+  font-family: 'Nanum Myeongjo';
+  font-size: 523px;
+  color: #e6e7f0;
+  position: absolute;
+  right:-170px;;
+  top: -350px;
+  z-index: -1;
+}
 
 #portfolio .center .pfWrap.left .imgBox {
   float: left;
@@ -217,12 +334,8 @@ header nav .nav-tit{
 
 #portfolio  .pfWrap .textBox {
   right: 0;
-  padding: 300px 30px 0;
+  padding: 100px 80px 0;
   float: left;
-}
-
-#portfolio .center>.title {
-  color: #ccc;
 }
 
 .textBox .textTit{
@@ -243,7 +356,8 @@ header nav .nav-tit{
 .textBox .headlineUnderBox {
   width: 100px;
   height: 6px;
-  background: #ccc;
+  background: rgb(81,103,244);
+  background: linear-gradient(90deg, rgba(81,103,244,1) 0%, rgba(241,184,165,1) 91%);
 }
 .textBox .caption {
   font-size: 16px;
@@ -266,21 +380,25 @@ button::after {
 
 button {
   background: none;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  color: #ccc;
+  border: 1px solid #1f4af8;
+  /* border-radius: 5px; */
+  color: #1f4af8;
   display: inline-grid;
-  font-size: 12px;
-  font-weight: bold;
+  font-size: 10px;
+  width: 160px;
+  height: 40px;
+  /* font-weight: bold; */
   /* margin: 1em auto; */
-  padding: 1.5em 6em;
+  /* padding: 1.5em 6em; */
   position: relative;
   text-transform: uppercase;
 }
 
 button::before,
 button::after {
-  background: #fa7333;
+  background: rgb(81,103,244);
+  background: linear-gradient(90deg, rgba(81,103,244,1) 0%, rgba(241,184,165,1) 91%);
+  border: none;
   content: '';
   position: absolute;
   z-index: -1;
@@ -303,16 +421,14 @@ button:hover {
 }
 
 /* right */
-
-
 #portfolio .center .pfWrap.right .textBox {
   float: right;
   /* right: 54%; */
   text-align: right;
-  padding: 312px 30px 0;
+  padding: 120px 80px 0;
 }
 #portfolio .center .pfWrap.right .imgBox{
-  right: 0;
+  float: right;
 }
 
 #portfolio .center .pfWrap.right .imgBox .item{
@@ -322,19 +438,10 @@ button:hover {
 #portfolio  .pfWrap.right .textBox .headlineUnderBox{
   float: right;
 }
-/* #portfolio .pfWrap.right .btnBox{
-  float: right;
-  display: inherit;
-}
-
-#portfolio  .pfWrap.right .btnBox li{
-  float: right;
-} */
-
 /* contact */
 #contact {
   padding: 20px 0;
-  background: #cccccc;
+  background: #5167f4;
 }
 
 #contact .tnkWrap{
@@ -348,9 +455,7 @@ button:hover {
 #contact .contact li{
   font-size: 16px;
   padding: 30px 0 0;
-  width: 250px;
-  margin: auto;
-  text-align: left;
+  text-align: center;
 }
 
 /* 버튼효과 */
@@ -366,13 +471,26 @@ button:hover {
 }
 
 /* 애니메이션 효과 */
-#about .aboutTxt {
+/* #about .aboutTxt {
   animation-name: movingPara;
   animation-duration: 3s;
-}
+} */
 
-@keyframes movingPara {
+/* @keyframes movingPara {
   from { margin-left: 100%; }
   to { margin-left: 0%; }
 
+} */
+
+#work {
+  padding: 50px 0 200px 0;
+}
+
+#work>.title {
+  padding: 50px 0;
+}
+
+.contact{
+  font-weight: normal;
+  color:#fff;
 }

@@ -61,7 +61,40 @@ $(function(){
             }
       } 
    }  
- 
+//  슬라이드
+
+    var swiper = new Swiper('#work .swiper-container', {
+      pagination: {
+        el: '.swiper-pagination',
+        type: 'fraction',
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+
+    var workSwiper = new Swiper('#work .swiper-container', {
+      slidesPerView: 2,
+      spaceBetween: 10,
+      pagination: {
+        el: '.swiper-pagination',
+        type: 'fraction',
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      loop:true,
+      centeredSlides: true,
+      breakpoints: {
+        1340: {
+          slidesPerView: 2,
+          spaceBetween: 180,
+        }
+      }
+    });
+
  
 
 });   
