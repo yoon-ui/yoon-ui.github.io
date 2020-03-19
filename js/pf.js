@@ -9,14 +9,24 @@ $(function(){
         $('body').removeClass('scroll');
     }
   });
-  //
-  $('.material-icons').click(function(){
-   $('body').toggleClass('open');
- })
+
  
   $('.material-icons').click(function(){
-   $('.nav-pc').show();
+   $('.nav').show();
  });
+
+ var btnFlag=true;
+   $('.nav-mobile').click(function(){
+      $('body').toggleClass('open');
+      if(btnFlag){
+         btnFlag=false;
+         $(this).find('i').text('close');
+      }else{
+         btnFlag=true;
+         $(this).find('i').text('menu');
+      }
+   })
+
 
   //타이핑 효과
    var typingBool = false; 
@@ -62,17 +72,6 @@ $(function(){
       } 
    }  
 //  슬라이드
-
-    var swiper = new Swiper('#work .swiper-container', {
-      pagination: {
-        el: '.swiper-pagination',
-        type: 'fraction',
-      },
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      },
-    });
 
     var workSwiper = new Swiper('#work .swiper-container', {
       slidesPerView: 2,

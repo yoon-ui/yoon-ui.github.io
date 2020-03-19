@@ -4,8 +4,8 @@
     max-width: 719px;
     padding-bottom: 40px;
 }
-.title{
-    font-size: 18px;
+.title {
+    font-size: 24px;
 }
 
 header .nav{
@@ -62,7 +62,7 @@ header .nav>li>a::after{
 .scroll header {
     background: #5167f4;
     line-height: 10px;
-    width: 24%;
+    width: 11%;
 }
 /* main */
 .main {
@@ -134,16 +134,18 @@ header .nav>li>a::after{
 }
 
 /* portfolio */
-#portfolio{
-    padding: 50px 20px;
+
+#portfolio {
+    padding: 50px;
 }
 .pfTit::before, .pfTit::after {
     margin: 0 10px;
 }
 #portfolio .center .pfWrap.right .textBox,
 #portfolio .pfWrap .textBox {
-    padding: 60px 20px 0;
     text-align: center;
+    padding: 40px 0;
+    float: inherit;
 }
 #portfolio .textBox .headline{
     margin: auto;
@@ -151,6 +153,10 @@ header .nav>li>a::after{
 #portfolio .center .pfWrap.right .textBox .headline{
     float: initial;
 }
+#portfolio .center .pfWrap.left .imgBox {
+    float: inherit;
+}
+
 button{
     display: block;
     margin: 20px auto;

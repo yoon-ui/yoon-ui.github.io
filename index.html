@@ -9,8 +9,8 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/swiper.min.css">
-    <!-- <link rel="stylesheet" href="css/mobile.css" media="screen and (max-width:767px)">
-    <link rel="stylesheet" href="css/tablet.css" media="screen and (min-width:768px) and (max-width:1340px)"> -->
+    <link rel="stylesheet" href="css/mobile.css" media="screen and (max-width:767px)">
+    <link rel="stylesheet" href="css/tablet.css" media="screen and (min-width:768px) and (max-width:1340px)">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touch/1.1.0/jquery.touch.min.js"></script>
     <script src="js/swiper.min.js"></script>
@@ -25,22 +25,19 @@
 <body>
     <!-- header -->
     <header>
-      <nav>
         <div class="center">
             <div class="nav-mobile">
               <i class="material-icons">menu </i>
             </div>
-            <ul class="nav-pc">
+            <ul class="nav">
               <li><a href="#home">HOME</a></li>
               <li><a href="#about">ABOUT</a></li>
-              <li><a href="#portfolio">PORTFOLIO</a></li>
-              <li><a href="#WORK">WORK</a></li>
-              <!-- <li><a href="#work"> DESIGN</a></li> -->
+              <li><a href="#portfolio">WEB</a></li>
+              <li><a href="#work">WORK</a></li>
               <li><a href="#contact">CONTACT</a></li>
             </ul>
             <div class="nav-tit">Yoon's Portfolio</div>
         </div>
-      </nav>
     </header>
       <!-- main -->
       <div class="main" id="home">
@@ -48,7 +45,6 @@
           <div class="txtWrap">
               <h3>YOON AH YOUNG</h3>
               <h3 class="pfTxt">PORTFOLIO</h3>
-              <!-- <p class="typingTxt"> 안녕하세요. 웹 퍼블리셔 윤아영입니다.</p>  -->
               <div class="typing-txt"> 
                 <ul>
                   <li>안녕하세요. 웹 퍼블리셔 윤아영입니다.</li>
@@ -63,16 +59,16 @@
       </div>
     </div>
       <!-- about -->
-      <article id="about">
-        <div class="center">
-          <div class="title abtitle"> what about me?</div>
-          <!-- info -->
-          <div class="infoWrap">
-            <!-- <div class="profile"> -->
-              <div class="profile">
-                <img src="img/aboutImg.jpg" alt="about img">
-              </div>
-            <!-- </div> -->
+    <article id="about">
+      <div class="center">
+        <div class="title abtitle"> what about me?</div>
+        <!-- info -->
+        <div class="infoWrap">
+          <div class="wrap">
+            <div class="profile">
+              <img src="img/aboutImg.jpg" alt="about img">
+            </div>
+
             <div class="txtWrap">
               <div class="pfInfo txt">
                   <ul class="personInfo">
@@ -80,45 +76,44 @@
                     <li class="part">Front-end Developer [신입]</li>
                   </ul>
               </div>
-              <div class="education txt">
+
+              <div class="infoList txt">
                 <h3>EDUCATION</h3>
-                <ul class="edu_list clearfix">
+                <ul class="list clearfix">
                   <li>
-                    <p class="date">2017.11~2018.03 </p>
+                    <p class="date">2017.11 - 2018.03 </p>
                     <p>더조은컴퓨터아카데미</p>
                     <p>웹퍼블리셔(웹디자인)UI/UX 프론트엔드 양성과정 수료</p>
                   </li>
                 </ul>
                 <h3>CAREER</h3>
-                <ul class="edu_list clearfix">
+                <ul class="list clearfix">
                   <li>
-                    <p class="date">2017.11 - 2018.03</p>
+                    <p class="date">2018.01 - 2019.03</p>
                     <p>테이크나인(사원)</p>
                   </li>
                   <li>
-                    <p class="date">2016.04 - 2017.127</p>
+                    <p class="date">2016.04 - 2017.12</p>
                     <p>지엠씨컴즈 (사원)</p>
                   </li>
                 </ul>
                 <h3>CERTIFICATE</h3>
-                <ul class="edu_list clearfix">
+                <ul class="list clearfix">
                   <li>
                     <p class="date">2014</p>
                     <p>컴퓨터그랙픽스운용기능사</p>
                   </li>
                 </ul>
               </div>
-  
-            </div>
           </div>
         </div>
-      </article>
+      </div>
+    </article>
 
       <!-- portfolio -->
       <article id="portfolio">
         <div class="center">
           <div class="pfTit title">WEB</div>
-
           <div class="pfWrap left clear">
             <span class="pfNum nanummyeongjo">01</span>
             <div class="imgBox">
@@ -131,7 +126,7 @@
                 <p class="subTit">RESPONSIVE WEBSITE</p>
                </div>
               <div class="textSkile">HTML5, CSS3, JAVASCRIPT, JQUERY</div>
-              <div class="headlineUnderBox"></div>
+              <div class="headline"></div>
               <div class="caption">액션스포츠 및 라이프스타일 풋풰어 '반스'의 공식 웹사이트</div>
                 <button onclick="window.open('https://yoon-ui.github.io/vans/')" class="btn">view web</button>
                 <button onclick="window.open('https://github.com/yoon-ui/vans')" class="btn">view code</button>
@@ -150,7 +145,7 @@
                 <p class="subTit">RESPONSIVE WEBSITE</p>
                </div>
               <div class="textSkile">HTML5, CSS3, JAVASCRIPT, JQUERY</div>
-              <div class="headlineUnderBox"></div>
+              <div class="headline"></div>
               <div class="caption">대한민국 커피 전문 체인점 '이디야'의 웹사이트</div>
               <button onclick="window.open('https://yoon-ui.github.io/ediya/')" class="btn">view web</button>
               <button onclick="window.open('https://github.com/yoon-ui/ediya')"class="btn">view code</button>
@@ -162,25 +157,19 @@
                   <img src="img/4.png" alt="starbuks web image">
             </div>
             <div class="textBox">
-              <!-- <span>#03</span> -->
+              <span>#03</span>
               <div class="textTit">
                 <p>starbucks</p>
                 <p class="subTit">RESPONSIVE WEBSITE</p>
                </div>
               <div class="textSkile">HTML5, CSS3, JAVASCRIPT, JQUERY</div>
-              <div class="headlineUnderBox"></div>
+              <div class="headline"></div>
               <div class="caption"> 세계에서 가장 큰 다국적 커피 전문점 '스타벅스'의 웹사이트</div>
               <button onclick="window.open('https://yoon-ui.github.io/starbucks/')" class="btn">view web</button>
               <button onclick="window.open('https://github.com/yoon-ui/starbucks')" class="btn">view code</button>
             </div>
           </div>
-
-
-
-          
         </div>
-
-     
       </article>
       <!-- work design -->
       <article id="work">
@@ -199,11 +188,7 @@
             <div class="swiper-button-next"></div>
             <div class="swiper-button-prev"></div>
           </div>
-        
-
       </article>
-
-  
 
       <!-- contact -->
       <article id="contact">
@@ -214,9 +199,8 @@
             <ul class="contact">
               <li>Number / 01046134331</li>
               <li>E-Mail / 21dkdud21@gmail.com</li>
-              <li>GITHUB   / gmail.com</li>
+              <li>GITHUB  / https://yoon-ui.github.io/</li>
             </ul>
-          
         </div>
       </article> 
 </body>

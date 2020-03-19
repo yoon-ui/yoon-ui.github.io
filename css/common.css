@@ -2,7 +2,6 @@
 
 
 /* font */
-
  @font-face {
     font-family: 'NanumGothic';
     src: url(../font/NanumSquareL.ttf);
@@ -25,79 +24,19 @@
   src: url(../font/NanumSquareEB.ttf);
   font-weight: 800;
 }
- 
-
-@import url(//fonts.googleapis.com/earlyaccess/nanummyeongjo.css);
-
-.nanummyeongjo * {
- font-family: 'Nanum Myeongjo', serif;
-}
-
-/** 이하는 공통 **/
-.normal {
- font-style: normal;
-}
-
-.w250 {
- font-weight: 250;
-}
-
-.w300 {
- font-weight: 300;
-}
-
-.w350 {
- font-weight: 350;
-}
-
-.w400 {
- font-weight: 400;
-}
-
-.w500 {
- font-weight: 500;
-}
-
-.w600 {
- font-weight: 600;
-}
-
-.w700 {
- font-weight: 700;
-}
-
-.w800 {
- font-weight: 800;
-}
-
-.w900 {
- font-weight: 900;
-}
-
-li span {
- line-height: 1.8;
- font-size: 1.3em;
-}
-
-
-  body{font-family:'NanumGothic','sans-serif';}
 
 /* reset */
+body{font-family:'NanumGothic','sans-serif';}
 *{margin: 0;padding: 0; border: 0;}
 a{text-decoration: none;color: #000;}
 ol, ul{list-style: none;}
 img{vertical-align: middle; max-width: 100%}
+
 /* common */
 .center{
   position: relative;
   max-width: 1400px;
   margin: auto;
-}
-.inner{
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 50px 0;
 }
 
 /* title */
@@ -119,7 +58,6 @@ img{vertical-align: middle; max-width: 100%}
     margin: 0 55px 0 55px;
 }
 
-
 /* 타이핑 효과 */
 .typing-txt{display: none;}
 .typing ul li{
@@ -137,13 +75,11 @@ img{vertical-align: middle; max-width: 100%}
   100%{border-right: 1px solid #fff} 
 }
 
-
-/* header */
+/* header ==================*/
 header .nav-mobile {
   display: none;
 }
-
-header nav{
+header{
   position: fixed;
   width: 100%;
   line-height: 40px;
@@ -153,46 +89,43 @@ header nav{
   color: #1f4af8;
   z-index: 99;
 }
-header .nav-pc {
+header .nav{
   float: right;
 }
-header  .nav-pc li{
+header .nav li{
   display: inline-block;
   margin-right: 20px;
 }
-header  .nav-pc li>a{
+header .nav li>a{
   color: #fff;
 }
-header nav .nav-pc>li>a::after{
+header .nav>li>a::after{
   content: '';
   display: block;
   width: 0%;
   height: 4px;
   margin: auto;
-  background: #1f4af8;
+  background: #fbed99;
   transition: width 0.2s;
 }
-header nav .nav-pc>li:hover>a::after{
+header .nav>li:hover>a::after{
   width: 100%;
 }
-header nav .nav-pc>li:hover>a{
-  color: #93a9ff;
+header .nav>li:hover>a{
+  color: #fbed99;
 }
 
-header nav .nav-tit{
-  color: #ccc;
+header .nav-tit{
+  color: #f5bee2;
 }
 
 /* scroll */
-.scroll header nav{
+.scroll header{
   background: #5167f4;
   line-height: 20px;
  }
 
-
-
-
-/* main */
+/* main ================== */
 .main{
   background: url(../img/main2.png) no-repeat center;
   background-size: cover;
@@ -200,9 +133,9 @@ header nav .nav-tit{
   height: 800px;
 }
 .main .txtWrap{
-    padding: 300px 0px 0px 100px;
-    box-sizing: border-box;
-    color: #fff;
+  padding: 300px 0;
+  box-sizing: border-box;
+  color: #fff;
 }
 .main .txtWrap h3{
   font-weight: bold;
@@ -217,16 +150,11 @@ header nav .nav-tit{
   text-align: center;
 }
 
-
-/* about */
+/* about ================== */
 #about{
   background: #f9faff;
   height: 600px;
   padding: 100px 0;
-}
-
-#about .profile{
-  float: left;
 }
 #about .abtitle{
   color: #5167f4;
@@ -235,34 +163,45 @@ header nav .nav-tit{
   letter-spacing: 10px;
   padding: 0 0 80px 0;
 }
-#about .profile{
+#about .infoWrap{
   position: relative;
+  height: 500px;
+}
+#about .infoWrap .wrap{
+  position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+#about .infoWrap .profile{
+  /* position: relative;
+  float: left;
   width: 300px;
   height: 300px;
   margin: 80px 50px;
   border-radius: 50%;
+  overflow: hidden; */
+  width: 40%;
+  margin: 104px 30px;
+  float: left;
+  /* width: 300px; */
+  /* height: 300px; */
+  /* margin: 80px 50px; */
+  border-radius: 50%;
   overflow: hidden;
 }
-
-#about .profile>img:hover {
-  filter: grayscale(0%);
-  transition: .5s ease-in-out;
-} 
-
-#about .profile>img {
+#about .infoWrap .profile>img {
   filter: grayscale(100%);
   transition: .5s ease-in-out;
 }
-
-#about .infoWrap{
-  padding: 0 50px;
+#about .infoWrap .profile>img:hover {
+  filter: grayscale(0%);
+  transition: .5s ease-in-out;
 }
-.txtWrap{
+
+#about .txtWrap{
+  width: 50%;
   display: inline-block;
-}
-
-#about .date{
-  color:#989696;
 }
 #about .txt{
   padding: 0 0 20px 0;
@@ -271,95 +210,72 @@ header nav .nav-tit{
   color:#5167f4;
   padding: 10px 0;
 }
-#about li>p{
-  padding: 5px 0;
-}
 
-#about .edu_list{
+#about .infoList .list{
   padding: 0 0 10px 0;
 }
-
-/* #about .wrap{
-  position: absolute;
-  left: 40%;
-  bottom: 50%;
+#about .infoList .list li>p{
+  padding: 5px 0;
 }
-#about .wrap>.headline {
-  font-size: 48px;
-  font-weight: 500;
-} */
+#about .infoList .list .date{
+  color:#989696;
+}
 
-/* portfolio */
 
-.clear {
-  content: '';
+
+/* portfolio ================== */
+.clear{
   display: block;
   clear: both;
 }
-
 #portfolio{
   width: 100%;
   padding: 100px 0 0;
   box-sizing: border-box;
   position: relative;
+  overflow: hidden;
 }
 #portfolio .center .pfWrap {
   position: relative;
   height: 650px;
   margin-top: 200px;
 }
-#portfolio .center .pfWrap.left>.pfNum{
+
+#portfolio .center .pfWrap .pfNum{
   font-family: 'Nanum Myeongjo';
   font-size: 523px;
   color: #e6e7f0;
   position: absolute;
-  left: -170px;
-  top: -270px;
   z-index: -1;
 }
-
-#portfolio .center .pfWrap.right>.pfNum{
-  font-family: 'Nanum Myeongjo';
-  font-size: 523px;
-  color: #e6e7f0;
-  position: absolute;
-  right:-170px;;
-  top: -350px;
-  z-index: -1;
-}
-
-#portfolio .center .pfWrap.left .imgBox {
-  float: left;
-}
-
-#portfolio  .pfWrap .textBox {
+#portfolio .pfWrap .textBox {
   right: 0;
   padding: 100px 80px 0;
   float: left;
 }
 
-.textBox .textTit{
+#portfolio .textBox .textTit{
   font-size: 3em;
   font-weight: bold;
   letter-spacing: 1px;
 }
-.textBox .textSkile {
+#portfolio .textBox .textSkile {
   font-size: 18px;
   font-weight: 300;
   letter-spacing: 1px;
   margin: 16px 0 24px;
 }
 
-.textBox .textTit>.subTit{
+#portfolio .textBox .textTit>.subTit{
   font-size: 28px;
 }
-.textBox .headlineUnderBox {
+#portfolio .textBox .headline {
   width: 100px;
   height: 6px;
   background: rgb(81,103,244);
   background: linear-gradient(90deg, rgba(81,103,244,1) 0%, rgba(241,184,165,1) 91%);
 }
-.textBox .caption {
+#portfolio .textBox .caption {
   font-size: 16px;
   font-weight: 300;
   margin: 16px 0 24px;
@@ -367,8 +283,7 @@ header nav .nav-tit{
   padding-top: 16px;
 }
 
-
-/* btnBox */
+/* button 효과 */
 button,
 button::after {
   -webkit-transition: all 0.3s;
@@ -381,15 +296,11 @@ button::after {
 button {
   background: none;
   border: 1px solid #1f4af8;
-  /* border-radius: 5px; */
   color: #1f4af8;
   display: inline-grid;
   font-size: 10px;
   width: 160px;
   height: 40px;
-  /* font-weight: bold; */
-  /* margin: 1em auto; */
-  /* padding: 1.5em 6em; */
   position: relative;
   text-transform: uppercase;
 }
@@ -408,7 +319,6 @@ button:hover {
   color: #fff;
 }
 
-/* BUTTON 2 */
 .btn::after {
   height: 100%;
   left: 0;
@@ -420,25 +330,51 @@ button:hover {
   width: 100%;
 }
 
+/* left */
+#portfolio .center .pfWrap.left>.pfNum{
+  left: -170px;
+  top: -270px;
+}
+#portfolio .center .pfWrap.left .imgBox {
+  float: left;
+}
+
 /* right */
-#portfolio .center .pfWrap.right .textBox {
-  float: right;
-  /* right: 54%; */
-  text-align: right;
-  padding: 120px 80px 0;
+#portfolio .center .pfWrap.right>.pfNum{
+  right:-170px;;
+  top: -350px;
 }
 #portfolio .center .pfWrap.right .imgBox{
   float: right;
+}
+#portfolio .center .pfWrap.right .textBox {
+  float: right;
+  text-align: right;
+  padding: 120px 80px 0;
 }
 
 #portfolio .center .pfWrap.right .imgBox .item{
   float: right;
 }
 
-#portfolio  .pfWrap.right .textBox .headlineUnderBox{
+#portfolio .center .pfWrap.right .textBox .headline{
   float: right;
 }
-/* contact */
+
+/* work ================== */
+#work {
+  padding: 50px 0 200px 0;
+}
+
+#work>.title {
+  padding: 50px 0;
+}
+.swiper-button-prev:after, .swiper-container-rtl .swiper-button-next:after,
+.swiper-button-next:after, .swiper-container-rtl .swiper-button-prev:after {
+  color: #f5bee2;
+}
+
+/* contact ==================*/
 #contact {
   padding: 20px 0;
   background: #5167f4;
@@ -448,10 +384,7 @@ button:hover {
   text-align: center;
   color:#fff;
 }
-/* 
-#contact .contact{
-  font-size: 12px;
-} */
+
 #contact .contact li{
   font-size: 16px;
   padding: 30px 0 0;
@@ -470,27 +403,8 @@ button:hover {
   width: 100%;
 }
 
-/* 애니메이션 효과 */
-/* #about .aboutTxt {
-  animation-name: movingPara;
-  animation-duration: 3s;
-} */
 
-/* @keyframes movingPara {
-  from { margin-left: 100%; }
-  to { margin-left: 0%; }
-
-} */
-
-#work {
-  padding: 50px 0 200px 0;
-}
-
-#work>.title {
-  padding: 50px 0;
-}
-
-.contact{
+#contact .contact{
   font-weight: normal;
   color:#fff;
 }
