@@ -87,9 +87,11 @@ $(function(){
       loop:true,
       centeredSlides: true,
       breakpoints: {
-        1340: {
-          slidesPerView: 2,
-          spaceBetween: 180,
+        1200: {
+          spaceBetween: 80
+        },
+        768: {
+          spaceBetween: 40
         }
       }
     });

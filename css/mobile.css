@@ -61,8 +61,8 @@ header .nav>li>a::after{
 /* scroll */
 .scroll header {
     background: #5167f4;
-    line-height: 10px;
-    width: 24%;
+    /* line-height: 30px; */
+    width: 20%;
 }
 /* main */
 .main {
@@ -74,7 +74,7 @@ header .nav>li>a::after{
 }
 
 .main .txtWrap {
-    padding: 160px 0px;
+    padding: 133px 0px;
 }
 
 .main .txtWrap h3 {
@@ -155,4 +155,7 @@ button{
     display: block;
     margin: 20px auto;
     width: 60%;
+}
+.swiper-slide{
+    width: 80% !important;
 }
