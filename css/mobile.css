@@ -2,7 +2,6 @@
 
 .center {
     max-width: 719px;
-    padding-bottom: 40px;
 }
 .title{
     font-size: 18px;
@@ -23,8 +22,8 @@ header .nav{
 header .nav-mobile {
     z-index: 50;
     display: block;
-    position: absolute;
-    left: 10px;
+    /* position: absolute; */
+    /* left: 10px; */
     color: #fbed99;
 }
 header .nav-tit{
@@ -38,14 +37,14 @@ header .nav li{
     height: 100px;
 }
 header .nav>li:hover>a{
-    color:#5167f4;
+    color:#0450a0;
 }
 header .nav li>a{
     line-height: 100px;
     margin: 0;
     padding: 0 25px;
     box-sizing: border-box;
-    color: #5167f4;
+    color: #0450a0;
 }
 header .nav>li>a::after{
    display: none;
@@ -55,14 +54,13 @@ header .nav>li>a::after{
     left: 0;
 }
 .open .nav-mobile  {
-    left: 300px;
+    left: 60%;
     color: #fbed99;
 }
 /* scroll */
 .scroll header {
-    background: #5167f4;
     /* line-height: 30px; */
-    width: 20%;
+    width: 80px;
 }
 /* main */
 .main {
@@ -70,11 +68,10 @@ header .nav>li>a::after{
     height: 500px;
     padding: 100px 0;
     box-sizing: border-box;
-    background: #5167f4;
 }
 
 .main .txtWrap {
-    padding: 133px 0px;
+    padding: 100px 0px;
 }
 
 .main .txtWrap h3 {
@@ -91,10 +88,7 @@ header .nav>li>a::after{
 }
 
 /* about me ======================*/
-#about {
-    position: initial;
-    height: initial;
-    padding: 50px 0;
+#about {height: 880px;
 }
 #about .abtitle{
     font-size: 18px;
@@ -104,10 +98,10 @@ header .nav>li>a::after{
     height: auto;
 }
 #about .infoWrap .wrap{
-    position: relative;
+    /* position: relative;
     top: 40%;
     left: initial;
-    transform: initial;
+    transform: initial; */
 }
 /* #about .profile{
     margin: 0 0 30px 0;
@@ -119,14 +113,19 @@ header .nav>li>a::after{
 #about .infoWrap .profile{
     max-width: 200px;
     width: 100%;
-    float: initial;
+    /* float: initial; */
+    left: 50%;
     margin: 20px auto;
+    transition: -50% -50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%, -3%, 0);
 }
 #about .txtWrap{
     display: block;
     width: 100%;
-    padding: 0 10px;
-    box-sizing: border-box;
+    top: 280px;
 }
 
 #about .txtWrap .txt {

@@ -3,30 +3,23 @@
 
 /* font */
  @font-face {
-    font-family: 'NanumGothic';
-    src: url(../font/NanumSquareL.ttf);
-    font-weight: 200;
+    font-family: 'GmarketSansTTFBold';
+    src: url(../font/GmarketSansTTFBold.ttf);
  }
  
  @font-face {
-  font-family: 'NanumGothic';
-  src: url(../font/NanumSquareR.ttf);
-  font-weight: 400;
+  font-family: 'GmarketSansTTFLight';
+  src: url(../font/GmarketSansTTFLight.ttf);
 }
  
  @font-face {
-    font-family: 'NanumGothic';
-    src: url(../font/NanumSquareB.ttf);
-    font-weight: 600;
+    font-family: 'GmarketSansTTFMedium';
+    src: url(../font/GmarketSansTTFMedium.ttf);
  }
- @font-face {
-  font-family: 'NanumGothic';
-  src: url(../font/NanumSquareEB.ttf);
-  font-weight: 800;
-}
+
 
 /* reset */
-body{font-family:'NanumGothic','sans-serif';}
+body{font-family:'GmarketSansTTFLight','sans-serif';}
 *{margin: 0;padding: 0; border: 0;}
 a{text-decoration: none;color: #000;}
 ol, ul{list-style: none;}
@@ -38,7 +31,6 @@ img{vertical-align: middle; max-width: 100%}
   max-width: 1400px;
   margin: auto;
 }
-
 /* title */
 .title{
   display: block;
@@ -86,7 +78,7 @@ header{
   padding: 20px;
   box-sizing: border-box;
   font-size: 1.1em;
-  color: #1f4af8;
+  color: #0450a0;
   z-index: 99;
 }
 header .nav{
@@ -121,7 +113,7 @@ header .nav-tit{
 
 /* scroll */
 .scroll header{
-  background: #5167f4;
+  background: url(../img/main2.png)  center;
   line-height: 20px;
  }
 
@@ -136,6 +128,7 @@ header .nav-tit{
   padding: 300px 0;
   box-sizing: border-box;
   color: #fff;
+  text-align: center;
 }
 .main .txtWrap h3{
   font-weight: bold;
@@ -153,38 +146,28 @@ header .nav-tit{
 /* about ================== */
 #about{
   background: #f9faff;
-  height: 600px;
+  height: 700px;
   padding: 100px 0;
 }
 #about .abtitle{
-  color: #5167f4;
+  color: #0450a0;
   font-size: 36px;
   text-transform: uppercase;
   letter-spacing: 10px;
   padding: 0 0 80px 0;
 }
 #about .infoWrap{
-  position: relative;
-  height: 500px;
+  /* position: relative;
+  height: 500px; */
 }
 #about .infoWrap .wrap{
-  position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+  position: relative;
 }
 #about .infoWrap .profile{
-  /* position: relative;
-  float: left;
-  width: 300px;
-  height: 300px;
-  margin: 80px 50px;
-  border-radius: 50%;
-  overflow: hidden; */
-  width: 40%;
-  margin: 104px 30px;
-  float: left;
-  /* width: 300px; */
+  width: 30%;
+  /* margin: 104px 30px; */
+  position: absolute;
+  left: 210px;
   /* height: 300px; */
   /* margin: 80px 50px; */
   border-radius: 50%;
@@ -201,13 +184,16 @@ header .nav-tit{
 
 #about .txtWrap{
   width: 50%;
-  display: inline-block;
+  /* display: inline-block; */
+  position: absolute;
+  right: 0;
 }
+
 #about .txt{
   padding: 0 0 20px 0;
 }
 #about .txt>h3{
-  color:#5167f4;
+  color:#0450a0;
   padding: 10px 0;
 }
 
@@ -272,8 +258,8 @@ header .nav-tit{
 #portfolio .textBox .headline {
   width: 100px;
   height: 6px;
-  background: rgb(81,103,244);
-  background: linear-gradient(90deg, rgba(81,103,244,1) 0%, rgba(241,184,165,1) 91%);
+  background: rgb(4,80,160);
+  background: linear-gradient(90deg, rgba(4,80,160,1) 0%, rgba(241,184,165,1) 91%);
 }
 #portfolio .textBox .caption {
   font-size: 16px;
@@ -295,9 +281,9 @@ button::after {
 
 button {
   background: none;
-  border: 1px solid #1f4af8;
-  color: #1f4af8;
-  display: inline-grid;
+  border: 1px solid #5167f4;
+  color: #5167f4;
+  /* display: inline-grid; */
   font-size: 10px;
   width: 160px;
   height: 40px;
@@ -377,7 +363,7 @@ button:hover {
 /* contact ==================*/
 #contact {
   padding: 20px 0;
-  background: #5167f4;
+  background: url(../img/main2.png) center;
 }
 
 #contact .tnkWrap{

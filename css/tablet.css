@@ -24,7 +24,6 @@ header .nav-mobile {
     z-index: 50;
     display: block;
     position: absolute;
-    left: 10px;
     color: #fbed99;
 }
 header .nav-tit{
@@ -55,22 +54,21 @@ header .nav>li>a::after{
     left: 0;
 }
 .open .nav-mobile  {
-    left: 300px;
+    left: 25%;
     color: #fbed99;
 }
 /* scroll */
 .scroll header {
-    background: #5167f4;
+    background: url(../img/main2.png) center;
     line-height: 10px;
-    width: 11%;
+    width: 80px;
 }
 /* main */
 .main {
     position: relative;
     height: 500px;
-    padding: 100px 0;
+    padding: 44px 0;
     box-sizing: border-box;
-    background: #5167f4;
 }
 
 .main .txtWrap {
@@ -93,8 +91,8 @@ header .nav>li>a::after{
 /* about me ======================*/
 #about {
     position: initial;
-    height: initial;
     padding: 50px 0;
+    height: 940px;
 }
 #about .abtitle{
     font-size: 18px;
@@ -119,14 +117,15 @@ header .nav>li>a::after{
 #about .infoWrap .profile{
     max-width: 200px;
     width: 100%;
-    float: initial;
-    margin: 20px auto;
+    margin: 20px 40px auto
 }
 #about .txtWrap{
     display: block;
     width: 100%;
     padding: 0 10px;
     box-sizing: border-box;
+    position: absolute;
+    top: 270px;
 }
 
 #about .txtWrap .txt {
@@ -136,7 +135,7 @@ header .nav>li>a::after{
 /* portfolio */
 
 #portfolio {
-    padding: 50px;
+    padding: 100px 0;
 }
 .pfTit::before, .pfTit::after {
     margin: 0 10px;
@@ -161,4 +160,8 @@ button{
     display: block;
     margin: 20px auto;
     width: 60%;
+}
+
+#work {
+    padding: 50px 0 100px 0;
 }
